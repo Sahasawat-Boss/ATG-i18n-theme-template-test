@@ -8,10 +8,33 @@
   },
   "Navigation": {
     "home": "Home",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
   },
   "Contact": {
     "title": "Get in Touch",
     "description": "We would love to hear from you. Leave a message below."
+  },
+  "Blog": {
+    "title": "Latest Articles",
+    "subtitle": "Discover insights, updates, and thoughts from our team.",
+    "readMore": "Read full article",
+    "posts": {
+      "post1": {
+        "title": "The Future of Web Design in 2026",
+        "excerpt": "Exploring upcoming trends in UI/UX including immersive 3D elements, dynamic spatial computing, and hyper-personalized interfaces.",
+        "date": "March 20, 2026"
+      },
+      "post2": {
+        "title": "Mastering Next.js 15 App Router",
+        "excerpt": "A deep dive into the new mental model, performance improvements, and routing patterns that Next.js 15 introduces.",
+        "date": "March 15, 2026"
+      },
+      "post3": {
+        "title": "Global Audiences with next-intl",
+        "excerpt": "Learn how to seamlessly adopt multi-language support out of the box with the powerful next-intl library in Next.js Server Components.",
+        "date": "March 10, 2026"
+      }
+    }
   }
 }

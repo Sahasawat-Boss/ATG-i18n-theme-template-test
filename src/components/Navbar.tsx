@@ -12,6 +12,7 @@ export default async function Navbar({ locale }: { locale: string }) {
       <div className="nav-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
         <Link href="/" className="nav-link">{t("home")}</Link>
         <Link href="/contact" className="nav-link">{t("contact")}</Link>
+        <Link href="/blog" className="nav-link">{t("blog")}</Link>
         <ClientLangSwitcher currentLocale={locale} />
         <ThemeSwitcher />
       </div>
