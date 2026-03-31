@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Experience the Future",
+    "subtitle": "Immersive design. Seamless flow.",
+    "cta": "Get Started",
+    "features": "Discover Features",
+    "description": "Welcome to a beautifully crafted, highly interactive landing page powered by Next.js 15 and next-intl."
+  },
+  "Navigation": {
+    "home": "Home",
+    "contact": "Contact"
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "We would love to hear from you. Leave a message below."
+  }
+}
