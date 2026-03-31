@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Script from "next/script";
+import Navbar from "@/components/Navbar";
 
 import "../css/globals.css";
 
@@ -21,11 +23,9 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-import Navbar from "@/components/Navbar";
-
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -42,21 +42,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={outfit.variable} suppressHydrationWarning>
-      <head>
-        <script
+      <body className="antialiased">
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('app-theme') || 'dark';
-                  document.documentElement.setAttribute('data-theme', theme);
-                } catch (e) {}
-              })();
-            `
+            __html: `(function(){try{var t=localStorage.getItem('app-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
           }}
         />
-      </head>
-      <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
           <Navbar locale={locale} />
           {children}
